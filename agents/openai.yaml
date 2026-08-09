@@ -1,0 +1,14 @@
+interface:
+  display_name: 水墨旅行照片海报
+  short_description: 将旅行照片转为宣纸水墨海报，所有文字均须有图片或元数据依据
+  default_prompt: Use $turn-photo-into-ink-travel-poster to transform this photo into
+    a Chinese ink-wash travel poster with evidence-grounded text only.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
