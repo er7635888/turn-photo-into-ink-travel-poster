@@ -5,7 +5,7 @@ description: Transform an uploaded travel, landscape, architecture, or everyday 
 
 # Turn Photo Into Ink Travel Poster
 
-Create one finished bitmap poster from the user's source photo. Preserve recognizable scene geometry and identity while translating its presentation into a quiet Chinese ink-wash travel editorial.
+Create one finished bitmap poster from the user's source photo. Preserve recognizable scene geometry and identity while translating its presentation into a quiet Chinese ink-wash travel editorial. Generate and return exactly one final image unless the user explicitly asks for multiple variants.
 
 ## Workflow
 
@@ -18,9 +18,9 @@ Create one finished bitmap poster from the user's source photo. Preserve recogni
    - Ask for only the missing fact when the user explicitly expects unsupported factual copy.
    - Omit an optional field when evidence is absent. Never fill space with a guess.
 5. Draft the exact text before image generation. Every clause must map to one or more ledger entries. Prefer short literal or modestly poetic observations grounded in visible content.
-6. Use the image-generation/editing tool with the source photo as a reference. Supply the exact approved text in the prompt and explicitly forbid any other legible characters.
-7. Inspect the output at original detail. Verify scene fidelity, spelling, dates, place names, and that no stray pseudo-text appeared. Regenerate or edit until every visible character is correct.
-8. Return the generated image and briefly state which evidence sources were used for the copy. Do not expose internal chain-of-thought.
+6. Use the image-generation/editing tool with the source photo as a reference. Request exactly one image in the prompt, supply the exact approved text, and explicitly forbid any other legible characters.
+7. Inspect the output at original detail. Verify scene fidelity, spelling, dates, place names, and that no stray pseudo-text appeared. If correction is needed, edit or regenerate a single replacement image only; do not produce variant grids or multiple alternatives.
+8. Return the single final generated image and briefly state which evidence sources were used for the copy. Do not expose internal chain-of-thought.
 
 ## Non-negotiable copy rules
 
@@ -37,6 +37,7 @@ Create one finished bitmap poster from the user's source photo. Preserve recogni
 ## Visual specification
 
 - Default to a 4:3 horizontal composition unless the user specifies another ratio.
+- Produce a single poster image only. Do not output multiple panels, variants, contact sheets, grids, alternates, or before/after comparisons unless the user explicitly asks for them.
 - Preserve the main photograph across roughly the lower two-thirds to four-fifths of the canvas.
 - Place it on a warm ivory, lightly fibrous rice-paper background with subtle age variation; avoid heavy grunge.
 - Fade the photograph into paper through organic dry-brush, ink-bloom, splatter, and broken-fiber edges. Keep edges irregular, never a rectangular frame.
